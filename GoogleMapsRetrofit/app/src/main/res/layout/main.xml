@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/off_white"
+                android:padding="0dip"
+                tools:context="com.sinch.android.rtc.sample.video.PlaceCallActivity">
+
+
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@+id/numberInputLayout"
+            android:paddingBottom="24dp" android:layout_centerHorizontal="true">
+        <TextView
+                android:id="@+id/infoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Talk to the "
+                android:textAllCaps="true"
+                android:textColor="@color/sinch_purple"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                />
+
+        <TextView
+                android:id="@+id/loggedInName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/sinch_purple"
+                android:text="Doctor"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+
+    <RelativeLayout android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentBottom="true"
+                  android:layout_centerHorizontal="true">
+
+        <!--<Button-->
+                <!--android:id="@+id/callButton"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="20dp"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:background="@color/sinch_purple"-->
+                <!--android:minHeight="56dp"-->
+                <!--android:minWidth="132dp"-->
+                <!--android:layout_centerHorizontal="true"/>-->
+
+        <Button
+                android:id="@+id/stopButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callButton"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/sinch_purple"
+                android:textAllCaps="true"
+                android:text="Call Later" android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+        android:orientation="vertical"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" android:id="@+id/numberInputLayout"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Call Dr.Khurana"
+                android:textAllCaps="true"
+                android:id="@+id/textView" android:layout_gravity="center_horizontal"
+                android:textColor="@color/sinch_purple" android:textSize="20sp"/>
+
+        <TextView
+                android:id="@+id/videoCall"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="32sp"
+                android:padding="10dp"
+                android:textColor="@color/off_white"
+                android:background="@color/sinch_purple"
+                android:text="Video Call"
+                android:layout_gravity="center">
+
+            <requestFocus/>
+        </TextView>
+
+        <TextView
+            android:id="@+id/phoneCall"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="32sp"
+            android:padding="10dp"
+            android:textColor="@color/off_white"
+            android:background="@color/sinch_purple" android:inputType="textNoSuggestions"
+            android:text="Phone Call"
+            android:layout_gravity="center">
+        </TextView>
+    </LinearLayout>
+
+</RelativeLayout>
